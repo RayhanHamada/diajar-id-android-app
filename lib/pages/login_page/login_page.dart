@@ -64,6 +64,7 @@ class LoginPage extends StatelessWidget {
                           prefixIcon: Icon(
                             Icons.mail_outline,
                             size: 30,
+                            color: Colors.white,
                           ),
                         ),
                       ),
@@ -95,6 +96,7 @@ class LoginPage extends StatelessWidget {
                           prefixIcon: Icon(
                             Icons.lock_outline,
                             size: 30,
+                            color: Colors.white,
                           ),
                         ),
                         obscureText: true,
@@ -128,7 +130,8 @@ class LoginPage extends StatelessWidget {
                       children: <Widget>[
                         Expanded(
                           child: Divider(
-                            thickness: 2,
+                            thickness: 1,
+                            color: Colors.white30,
                           ),
                         ),
                         Text(
@@ -140,7 +143,8 @@ class LoginPage extends StatelessWidget {
                         ),
                         Expanded(
                           child: Divider(
-                            thickness: 2,
+                            thickness: 1,
+                            color: Colors.white30,
                           ),
                         ),
                       ],
