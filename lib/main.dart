@@ -1,6 +1,7 @@
 import 'package:diajar/pages/login_page/login_page.dart';
 import 'package:diajar/pages/register_page/register_page.dart';
-import 'package:diajar/provider/test_provider.dart';
+import 'package:diajar/provider/login_provider.dart';
+import 'package:diajar/provider/register_provider.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'dart:math' as m;
 import 'package:provider/provider.dart';
@@ -12,12 +13,13 @@ void main() {
 }
 
 class RootApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(builder: (context) => TestProvider(),)
+//        Provider<LoginProvider>.value(value: LoginProvider("", "")),
+        ChangeNotifierProvider(builder: (context) => LoginProvider("",""),),
+        ChangeNotifierProvider(builder: (context) => RegisterProvider(),)
       ],
       child: MaterialApp(
         routes: {
@@ -51,7 +53,7 @@ class RootApp extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-          navigateAfterSeconds: LoginPage(),
+              navigateAfterSeconds: LoginPage(),
             );
           },
         ),
