@@ -10,6 +10,7 @@ class FullnameTxt extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
+        key: RegisterProvider.fullnameFieldKey,
         validator: registerProvider.fullnameValidate,
         onSaved: registerProvider.setFullname,
         style: TextStyle(

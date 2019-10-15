@@ -18,8 +18,12 @@ class RootApp extends StatelessWidget {
     return MultiProvider(
       providers: [
 //        Provider<LoginProvider>.value(value: LoginProvider("", "")),
-        ChangeNotifierProvider(builder: (context) => LoginProvider("",""),),
-        ChangeNotifierProvider(builder: (context) => RegisterProvider(),)
+        ChangeNotifierProvider(
+          builder: (context) => LoginProvider("", ""),
+        ),
+        ChangeNotifierProvider(
+          builder: (context) => RegisterProvider(),
+        )
       ],
       child: MaterialApp(
         routes: {

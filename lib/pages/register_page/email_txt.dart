@@ -10,6 +10,7 @@ class EmailTxt extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
+        key: RegisterProvider.emailFieldKey,
         validator: registerProvider.emailValidate,
         onSaved: registerProvider.setEmail,
         style: TextStyle(

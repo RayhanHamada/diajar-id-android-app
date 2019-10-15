@@ -1,5 +1,3 @@
-
-
 List<String> funfact = [
   "Diajar.ID merupakan platform belajar yang seru lho...",
   "Belajar jadi lebih mudah dengan Diajar.ID",

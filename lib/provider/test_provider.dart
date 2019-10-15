@@ -1,8 +1,6 @@
-
 import 'package:flutter/cupertino.dart';
 
 class TestProvider with ChangeNotifier {
-
   String _msg = "";
 
   set setMsg(String m) {
@@ -11,5 +9,4 @@ class TestProvider with ChangeNotifier {
   }
 
   String get msg => _msg;
-
 }

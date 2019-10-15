@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class PasswordTxt extends StatelessWidget {
-  final GlobalKey<FormFieldState<String>> _key;
-
-  const PasswordTxt(this._key);
-
   @override
   Widget build(BuildContext context) {
     var registerProvider = Provider.of<RegisterProvider>(context);
@@ -14,7 +10,7 @@ class PasswordTxt extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
-        key: _key,
+        key: RegisterProvider.passFieldKey,
         validator: registerProvider.passwordValidate,
         onSaved: registerProvider.setPassword,
         style: TextStyle(
