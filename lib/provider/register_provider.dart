@@ -81,10 +81,10 @@ class RegisterProvider with ChangeNotifier {
       return "Password tidak boleh kosong !";
     } else if (pv.length < 8) {
       _fullname = _email = _password = _passwordValidation = "";
-      return "Panjang password harus lebih dari 8";
+      return "Panjang password harus >= 8";
     } else if (pv != _passFieldKey.currentState.value) {
       _fullname = _email = _password = _passwordValidation = "";
-      return "Validasi Password harus sama";
+      return "Password validasi harus sama";
     }
 
     print("$_password $_passwordValidation");

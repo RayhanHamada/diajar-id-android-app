@@ -5,18 +5,28 @@ class LoginProvider with ChangeNotifier {
   String _emailToSave = "";
   String _passwordToSave = "";
 
+  static final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  static final _emailFieldKey = GlobalKey<FormFieldState<String>>();
+  static final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
+
   LoginProvider(this._emailToSave, this._passwordToSave);
 
-  String get email => _emailToSave;
-  String get password => _passwordToSave;
+  String get emailToSave => _emailToSave;
+  String get passwordToSave => _passwordToSave;
+
+  GlobalKey<FormState> get formKey => _formKey;
+  GlobalKey<FormFieldState<String>> get emailFieldKey => _emailFieldKey;
+  GlobalKey<FormFieldState<String>> get passwordFieldKey => _passwordFieldKey;
 
   void setEmail(String email) {
     _emailToSave = email;
+    print(_emailToSave);
     notifyListeners();
   }
 
   void setPassword(String pass) {
     _passwordToSave = pass;
+    print(_passwordToSave);
     notifyListeners();
   }
 
@@ -40,14 +50,6 @@ class LoginProvider with ChangeNotifier {
       return "Masukkan Password yang valid !";
     }
     return null;
-  }
-
-  void onLoginBtnPressed(GlobalKey<FormState> formKey) {
-//    validate if the email and password input are valid, if so then save
-//    if (formKey.currentState.validate()) {
-//      formKey.currentState.save();
-//      print("$_emailToSave $_passwordToSave");
-//    }
   }
 
   void goLogin() {

@@ -1,9 +1,9 @@
-import 'package:diajar/pages/register_page/daftar_btn.dart';
-import 'package:diajar/pages/register_page/email_txt.dart';
-import 'package:diajar/pages/register_page/fullname_txt.dart';
-import 'package:diajar/pages/register_page/password_txt.dart';
-import 'package:diajar/pages/register_page/password_val_txt.dart';
-import 'package:diajar/pages/register_page/to_login_page_btn.dart';
+import 'package:diajar/pages/register_page/components/daftar_btn.dart';
+import 'package:diajar/pages/register_page/components/email_txt.dart';
+import 'package:diajar/pages/register_page/components/fullname_txt.dart';
+import 'package:diajar/pages/register_page/components/password_txt.dart';
+import 'package:diajar/pages/register_page/components/password_val_txt.dart';
+import 'package:diajar/pages/register_page/components/to_login_page_btn.dart';
 import 'package:diajar/provider/register_provider.dart';
 import 'package:flutter/material.dart';
 

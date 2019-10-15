@@ -10,6 +10,7 @@ class PasswordTxt extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
+        key: loginProvider.passwordFieldKey,
         validator: loginProvider.validatePassword,
         onSaved: loginProvider.setPassword,
         style: TextStyle(

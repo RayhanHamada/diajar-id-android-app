@@ -3,20 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class LoginBtn extends StatelessWidget {
-  final GlobalKey<FormState> _formKey;
-
-  const LoginBtn(this._formKey);
+  void onPressed(LoginProvider provider) {
+    if (provider.formKey.currentState.validate()) {
+      provider.formKey.currentState.save();
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    var loginProvider = Provider.of<LoginProvider>(context);
-
+    final loginProvider = Provider.of<LoginProvider>(context);
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, bottom: 20.0),
       child: FractionallySizedBox(
         widthFactor: 0.85,
         child: RaisedButton(
-          onPressed: () => loginProvider.onLoginBtnPressed(_formKey),
+          onPressed: () => onPressed(loginProvider),
           color: Colors.deepOrange,
           child: Text(
             'Login',

@@ -1,4 +1,5 @@
 import 'package:diajar/provider/login_provider.dart';
+import 'package:diajar/provider/register_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -9,6 +10,7 @@ class EmailTxt extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
+        key: loginProvider.emailFieldKey,
         validator: loginProvider.validateEmail,
         onSaved: loginProvider.setEmail,
         style: TextStyle(
