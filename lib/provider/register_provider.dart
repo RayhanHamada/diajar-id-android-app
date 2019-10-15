@@ -18,11 +18,11 @@ class RegisterProvider with ChangeNotifier {
   String get password => _password;
   String get passwordValidation => _passwordValidation;
 
-  static get formKey => _formKey;
-  static get fullnameFieldKey => _fullnameFieldKey;
-  static get emailFieldKey => _emailFieldKey;
-  static get passFieldKey => _passFieldKey;
-  static get passValFieldKey => _passValFieldKey;
+  get formKey => _formKey;
+  get fullnameFieldKey => _fullnameFieldKey;
+  get emailFieldKey => _emailFieldKey;
+  get passFieldKey => _passFieldKey;
+  get passValFieldKey => _passValFieldKey;
 
   void setFullname(String f) {
     _fullname = f;
@@ -70,7 +70,7 @@ class RegisterProvider with ChangeNotifier {
       return "Password tidak boleh kosong !";
     } else if (password.length < 8) {
       _fullname = _email = _password = _passwordValidation = "";
-      return "Panjang Password harus lebih dari 8";
+      return "Panjang Password harus >= dari 8";
     }
     return null;
   }

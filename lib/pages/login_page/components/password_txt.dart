@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 class PasswordTxt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var loginProvider = Provider.of<LoginProvider>(context);
+    final loginProvider = Provider.of<LoginProvider>(context);
 
     return FractionallySizedBox(
       widthFactor: 0.85,

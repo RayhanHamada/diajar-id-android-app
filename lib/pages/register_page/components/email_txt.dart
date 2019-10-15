@@ -5,12 +5,12 @@ import 'package:provider/provider.dart';
 class EmailTxt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var registerProvider = Provider.of<RegisterProvider>(context);
+    final registerProvider = Provider.of<RegisterProvider>(context);
 
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
-        key: RegisterProvider.emailFieldKey,
+        key: registerProvider.emailFieldKey,
         validator: registerProvider.emailValidate,
         onSaved: registerProvider.setEmail,
         style: TextStyle(

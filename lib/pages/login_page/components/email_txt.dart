@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 class EmailTxt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var loginProvider = Provider.of<LoginProvider>(context);
+    final loginProvider = Provider.of<LoginProvider>(context);
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(

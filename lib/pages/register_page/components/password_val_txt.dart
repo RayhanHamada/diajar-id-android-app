@@ -5,12 +5,12 @@ import 'package:provider/provider.dart';
 class PasswordValTxt extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var registerProvider = Provider.of<RegisterProvider>(context);
+    final registerProvider = Provider.of<RegisterProvider>(context);
 
     return FractionallySizedBox(
       widthFactor: 0.85,
       child: TextFormField(
-        key: RegisterProvider.passValFieldKey,
+        key: registerProvider.passValFieldKey,
         validator: registerProvider.passwordValidationValidate,
         onSaved: registerProvider.setPasswordValidation,
         style: TextStyle(
