@@ -1,5 +1,3 @@
-import 'package:diajar/model/FunFact.dart';
-import 'dart:math' as m;
 import 'package:diajar/pages/login_page/components/diajar_image.dart';
 import 'package:diajar/pages/login_page/login_page.dart';
 import 'package:diajar/pages/splash_screen_page/components/diajar_text.dart';
@@ -8,6 +6,9 @@ import 'package:diajar/pages/splash_screen_page/components/load_indicator.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenPage extends StatelessWidget {
+
+  static const SPLASH_SCREEN_PAGE = "/SplashScreen";
+
   void toLoginScreen(BuildContext context) async {
     await Future.delayed(Duration(seconds: 5), () {
       Navigator.popAndPushNamed(context, LoginPage.LOGIN_PAGE);
