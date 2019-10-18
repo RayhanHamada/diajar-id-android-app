@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DashboardProvider with ChangeNotifier {
+class AfterLoginProvider with ChangeNotifier {
 
   static final _scaffoldKey = GlobalKey<ScaffoldState>();
 

@@ -3,15 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class LoginBtn extends StatelessWidget {
-  void onPressed(LoginProvider provider) {
-    if (provider.formKey.currentState.validate()) {
-      provider.formKey.currentState.save();
+  void onPressed(LoginProvider loginProvider) {
+    if (loginProvider.formKey.currentState.validate()) {
+      loginProvider.formKey.currentState.save();
+
+      if (loginProvider.goLogin()) {
+        // go to after login page
+
+      }
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final loginProvider = Provider.of<LoginProvider>(context);
+
     return Padding(
       padding: const EdgeInsets.only(top: 8.0, bottom: 20.0),
       child: FractionallySizedBox(

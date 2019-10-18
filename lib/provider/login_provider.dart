@@ -9,14 +9,12 @@ class LoginProvider with ChangeNotifier {
   static final _emailFieldKey = GlobalKey<FormFieldState<String>>();
   static final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
 
-  LoginProvider(this._emailToSave, this._passwordToSave);
-
   String get emailToSave => _emailToSave;
   String get passwordToSave => _passwordToSave;
 
-  GlobalKey<FormState> get formKey => _formKey;
-  GlobalKey<FormFieldState<String>> get emailFieldKey => _emailFieldKey;
-  GlobalKey<FormFieldState<String>> get passwordFieldKey => _passwordFieldKey;
+  get formKey => _formKey;
+  get emailFieldKey => _emailFieldKey;
+  get passwordFieldKey => _passwordFieldKey;
 
   void setEmail(String email) {
     _emailToSave = email;
@@ -52,7 +50,13 @@ class LoginProvider with ChangeNotifier {
     return null;
   }
 
-  void goLogin() {
-//    bikin POST request ke auth api/
+  bool goLogin() {
+    var isOkToLogin = false;
+
+    // bikin POST request ke auth api/
+
+    return isOkToLogin;
+
+
   }
 }

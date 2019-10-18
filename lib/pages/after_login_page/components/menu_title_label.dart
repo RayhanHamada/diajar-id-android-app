@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../provider/dashboard_provider.dart';
+import '../../../provider/after_login_provider.dart';
 
 
 class MenuTitleLabel extends StatelessWidget {
@@ -11,7 +11,7 @@ class MenuTitleLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dashboardProvider = Provider.of<DashboardProvider>(context);
+    final dashboardProvider = Provider.of<AfterLoginProvider>(context);
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: ListTile(
