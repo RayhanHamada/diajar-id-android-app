@@ -3,6 +3,7 @@ import 'package:diajar/pages/login_page/login_page.dart';
 import 'package:diajar/pages/splash_screen_page/components/diajar_text.dart';
 import 'package:diajar/pages/splash_screen_page/components/funfact_text.dart';
 import 'package:diajar/pages/splash_screen_page/components/load_indicator.dart';
+import 'package:diajar/reusable_components/fade_route.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenPage extends StatelessWidget {
@@ -10,7 +11,10 @@ class SplashScreenPage extends StatelessWidget {
 
   void toLoginScreen(BuildContext context) async {
     await Future.delayed(Duration(seconds: 5), () {
-      Navigator.pushReplacementNamed(context, LoginPage.LOGIN_PAGE);
+      Navigator.pushReplacement(
+        context,
+        FadeRoute(page: LoginPage()),
+      );
     });
   }
 

@@ -32,7 +32,7 @@ class ToRegisterPageBtn extends StatelessWidget {
       context,
       SlideRoute(
         page: RegisterPage(),
-        direction: SlideFrom.LEFT_UP,
+        direction: SlideFrom.RIGHT_MIDDLE,
       ),
     );
   }
