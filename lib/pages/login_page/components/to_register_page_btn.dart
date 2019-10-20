@@ -1,4 +1,5 @@
 import 'package:diajar/pages/login_page/login_handler.dart';
+import 'package:diajar/reusable_components/slide_route.dart';
 import 'package:diajar/pages/register_page/register_page.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,12 @@ class ToRegisterPageBtn extends StatelessWidget {
     loginHandler
       ..emailController.text = ''
       ..passwordController.text = '';
-    Navigator.pushNamed(context, RegisterPage.REGISTER_PAGE);
+    Navigator.push(
+      context,
+      SlideRoute(
+        page: RegisterPage(),
+        direction: SlideFrom.LEFT_UP,
+      ),
+    );
   }
 }
