@@ -1,3 +1,4 @@
+import 'package:diajar/pages/register_page/register_handler.dart';
 import 'package:flutter/material.dart';
 
 class ToLoginPageBtn extends StatelessWidget {
@@ -7,7 +8,7 @@ class ToLoginPageBtn extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 100),
         child: GestureDetector(
-          onTap: () => Navigator.pop(context),
+          onTap: () => goBack(context),
           child: Text(
             '< Kembali ke halaman login',
             style: TextStyle(
@@ -20,5 +21,15 @@ class ToLoginPageBtn extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void goBack(BuildContext context) {
+    final registerHandler = RegisterHandler.of(context);
+    registerHandler
+      ..fullnameController.text = ''
+      ..emailController.text = ''
+      ..passwordController.text = ''
+      ..passwordValController.text = '';
+    Navigator.pop(context);
   }
 }

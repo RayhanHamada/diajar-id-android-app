@@ -1,8 +1,5 @@
-import 'package:diajar/pages/login_page/components/diajar_image.dart';
-import 'package:diajar/pages/login_page/components/password_txt.dart';
-import 'package:diajar/pages/login_page/components/email_txt.dart';
-import 'package:diajar/pages/login_page/components/login_btn.dart';
-import 'package:diajar/pages/login_page/components/to_register_page_btn.dart';
+import 'package:diajar/pages/login_page/components/login_form.dart';
+import 'package:diajar/pages/login_page/login_handler.dart';
 import 'package:diajar/provider/login_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,24 +10,13 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loginProvider = Provider.of<LoginProvider>(context);
-    return Scaffold(
-      backgroundColor: Color.fromRGBO(0x00, 0x26, 0x63, 1),
-      body: Container(
-        child: Form(
-          key: loginProvider.formKey,
-          child: ListView(
-            children: <Widget>[
-              DiajarImage(),
-              Column(
-                children: <Widget>[
-                  EmailTxt(),
-                  PasswordTxt(),
-                  LoginBtn(),
-                  ToRegisterPageBtn(),
-                ],
-              ),
-            ],
+    return ChangeNotifierProvider<LoginProvider>(
+      builder: (context) => LoginProvider(),
+      child: LoginHandler(
+        child: Scaffold(
+          backgroundColor: Color.fromRGBO(0x00, 0x26, 0x63, 1),
+          body: Container(
+            child: LoginForm(),
           ),
         ),
       ),

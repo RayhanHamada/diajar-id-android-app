@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../provider/after_login_provider.dart';
 
-
 class MenuTitleLabel extends StatelessWidget {
-
   final String label;
 
   const MenuTitleLabel(this.label);
@@ -26,10 +24,7 @@ class MenuTitleLabel extends StatelessWidget {
         ),
         title: Text(
           'Dashboard',
-          style: TextStyle(
-              color: Colors.white,
-              fontSize: 20
-          ),
+          style: TextStyle(color: Colors.white, fontSize: 20),
         ),
       ),
     );

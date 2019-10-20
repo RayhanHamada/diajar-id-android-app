@@ -7,22 +7,10 @@ class RegisterProvider with ChangeNotifier {
   String _password = "";
   String _passwordValidation = "";
 
-  static final _formKey = GlobalKey<FormState>();
-  static final _fullnameFieldKey = GlobalKey<FormFieldState<String>>();
-  static final _emailFieldKey = GlobalKey<FormFieldState<String>>();
-  static final _passFieldKey = GlobalKey<FormFieldState<String>>();
-  static final _passValFieldKey = GlobalKey<FormFieldState<String>>();
-
   String get fullname => _fullname;
   String get email => _email;
   String get password => _password;
   String get passwordValidation => _passwordValidation;
-
-  get formKey => _formKey;
-  get fullnameFieldKey => _fullnameFieldKey;
-  get emailFieldKey => _emailFieldKey;
-  get passFieldKey => _passFieldKey;
-  get passValFieldKey => _passValFieldKey;
 
   void setFullname(String f) {
     _fullname = f;
@@ -75,19 +63,19 @@ class RegisterProvider with ChangeNotifier {
     return null;
   }
 
-  String passwordValidationValidate(String pv) {
-    if (pv.isEmpty) {
+  String passwordValidationValidate(
+      String passwordValidation, String password) {
+    if (passwordValidation.isEmpty) {
       _fullname = _email = _password = _passwordValidation = "";
       return "Password tidak boleh kosong !";
-    } else if (pv.length < 8) {
+    } else if (passwordValidation.length < 8) {
       _fullname = _email = _password = _passwordValidation = "";
       return "Panjang password harus >= 8";
-    } else if (pv != _passFieldKey.currentState.value) {
+    } else if (passwordValidation != password) {
       _fullname = _email = _password = _passwordValidation = "";
       return "Password validasi harus sama";
     }
 
-    print("$_password $_passwordValidation");
     return null;
   }
 

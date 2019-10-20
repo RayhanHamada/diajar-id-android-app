@@ -6,12 +6,11 @@ import 'package:diajar/pages/splash_screen_page/components/load_indicator.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreenPage extends StatelessWidget {
-
   static const SPLASH_SCREEN_PAGE = "/SplashScreen";
 
   void toLoginScreen(BuildContext context) async {
     await Future.delayed(Duration(seconds: 5), () {
-      Navigator.popAndPushNamed(context, LoginPage.LOGIN_PAGE);
+      Navigator.pushReplacementNamed(context, LoginPage.LOGIN_PAGE);
     });
   }
 

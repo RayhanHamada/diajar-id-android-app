@@ -9,7 +9,6 @@ class AfterLoginPage extends StatelessWidget {
     ChangeNotifierProvider(
       builder: (context) => AfterLoginProvider(),
     ),
-
   ];
 
   @override

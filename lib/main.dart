@@ -35,7 +35,7 @@ class RootApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         routes: _routes,
-        home: AfterLoginPage(),
+        home: SplashScreenPage(),
       ),
     );
   }

@@ -5,16 +5,8 @@ class LoginProvider with ChangeNotifier {
   String _emailToSave = "";
   String _passwordToSave = "";
 
-  static final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  static final _emailFieldKey = GlobalKey<FormFieldState<String>>();
-  static final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
-
   String get emailToSave => _emailToSave;
   String get passwordToSave => _passwordToSave;
-
-  get formKey => _formKey;
-  get emailFieldKey => _emailFieldKey;
-  get passwordFieldKey => _passwordFieldKey;
 
   void setEmail(String email) {
     _emailToSave = email;
@@ -56,7 +48,5 @@ class LoginProvider with ChangeNotifier {
     // bikin POST request ke auth api/
 
     return isOkToLogin;
-
-
   }
 }
