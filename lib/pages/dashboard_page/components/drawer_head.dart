@@ -4,8 +4,8 @@ class DrawerHead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.black,
-      height: 100,
+      color: Colors.deepOrangeAccent,
+      height: 150,
     );
   }
 }

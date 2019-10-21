@@ -1,10 +1,9 @@
-import 'package:diajar/pages/after_login_page/after_login_page.dart';
+import 'package:diajar/pages/dashboard_page/dashboard_page.dart';
 import 'package:diajar/pages/login_page/components/diajar_image.dart';
 import 'package:diajar/pages/login_page/components/to_register_page_btn.dart';
 import 'package:diajar/pages/login_page/login_handler.dart';
+import 'package:diajar/pages/reusable_components/slide_route.dart';
 import 'package:diajar/provider/login_provider.dart';
-import 'package:diajar/reusable_components/fade_route.dart';
-import 'package:diajar/reusable_components/slide_route.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -98,6 +97,6 @@ class LoginForm extends StatelessWidget {
       loginHandler.formKey.currentState.save();
     }
 
-    Navigator.pushReplacement(context, SlideRoute(page: AfterLoginPage()));
+    Navigator.pushReplacement(context, SlideRoute(page: DashboardPage()));
   }
 }

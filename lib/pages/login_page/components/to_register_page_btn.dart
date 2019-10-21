@@ -1,5 +1,5 @@
 import 'package:diajar/pages/login_page/login_handler.dart';
-import 'package:diajar/reusable_components/slide_route.dart';
+import 'package:diajar/pages/reusable_components/slide_route.dart';
 import 'package:diajar/pages/register_page/register_page.dart';
 import 'package:flutter/material.dart';
 
