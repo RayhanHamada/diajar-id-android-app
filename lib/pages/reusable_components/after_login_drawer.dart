@@ -1,5 +1,6 @@
 import 'package:diajar/pages/dashboard_page/components/drawer_head.dart';
 import 'package:diajar/pages/dashboard_page/dashboard_page.dart';
+import 'package:diajar/pages/login_page/login_page.dart';
 import 'package:diajar/pages/profile_page/profile_page.dart';
 import 'package:diajar/pages/reusable_components/fade_route.dart';
 import 'package:flutter/material.dart';
@@ -96,7 +97,7 @@ class AfterLoginDrawer extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  onTap: () {},
+                  onTap: () => _goLogout(context),
                 ),
               ],
             ),
@@ -104,5 +105,15 @@ class AfterLoginDrawer extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _goLogout(BuildContext context) {
+    /*
+    * TODO: 1. hapus data user di async storage termasuk token masuk,
+    *       2. panggil api auth dan hapus token saat ini di database,
+    *       3. baru logout.
+    * */
+
+    Navigator.pushReplacement(context, FadeRoute(page: LoginPage()));
   }
 }
